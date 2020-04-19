@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  
+    <mat-toolbar-row class="padding-right-3rem">
+        <span class="material-icons">shopping_cart</span>
+      <span class="wrapper-welcome">Online Shopping Mart</span>
+      <span class="example-spacer"></span>
+      <mat-icon matTooltipPosition="before" class="example-icon cursor-pointer" aria-hidden="false" matBadge="4" matBadgeColor="warn" matBadgeOverlap="false">add_shopping_cart</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-progress-bar *ngIf="authService.isProgress()" mode="indeterminate"></mat-progress-bar>
+  <mat-progress-spinner *ngIf="authService.isLoading()" class="example-margin wrapped-loader" mode="indeterminate">
+</mat-progress-spinner>

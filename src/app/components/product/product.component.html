@@ -1,0 +1,26 @@
+<mat-card class="example-card col-md-12 margin-bottom-1vh">
+    <div class="row">
+        <div class="col-md-2 text-align-center">
+                <img mat-card-image src="https://n3.sdlcdn.com/imgs/e/l/1/MSG-Cow-Desi-Ghee-1-SDL595875615-1-fddf8.png" alt="Photo of a product">
+                <div *ngIf="product.off" class="col-md-12">
+                    <div>{{product.off}}% OFF</div>
+                </div>
+        </div>
+        <div class="offset-md-1 col-md-9">
+            <div class="color-green font-size-1-5rem col-md-12">{{product.brand}}</div>
+            <div class="col-md-12">{{product.name}}</div>
+            <div class="col-md-12">MRP {{product.mrp}}</div>
+            <div class="col-md-12 color-black font-weight-700">RS {{product.rs}}</div>
+            <div class="col-md-12 font-weight-700">
+                <button (click)="addToCart(product)" mat-raised-button class="background-color-green font-weight-700">ADD CART</button>
+                
+                <button (click)=addQuantity(); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
+                    <mat-icon>add</mat-icon>
+                </button>
+                <span class="margin-left-2rem font-size-1-5rem">{{quantity}}</span>
+                <button [disabled]='quantity <=0' (click)=removeQuantity(); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
+                        <mat-icon>remove</mat-icon>
+                </button>
+            </div>
+        </div>
+</div>
