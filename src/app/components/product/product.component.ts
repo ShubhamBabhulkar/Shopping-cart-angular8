@@ -18,13 +18,16 @@ export class ProductComponent implements OnInit {
 
   addQuantity = () => {
     this.quantity++;
+    this.addToCart(this.product);
   }
   removeQuantity = () => {
     this.quantity--;
+    this.addToCart(this.product);
   }
 
   addToCart = (product) => {
     product.quantity = this.quantity;
+    product.price = product.rs * product.quantity;
     this.cartViewComponent.getAddedProducts(product);
   }
 }

@@ -29,7 +29,7 @@ import { CartViewComponent } from './components/cart-view/cart-view.component';
     BrowserAnimationsModule,
     MatcomponentModule
   ],
-  providers: [CartViewComponent],
+  providers: [CartViewComponent, TopBarComponent],
   bootstrap: [AppComponent],
   entryComponents: []
 })

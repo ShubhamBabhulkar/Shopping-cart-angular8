@@ -1,1 +1,4 @@
-<p>cart-view works!</p>
+1-{{products}}
+<span *ngFor="let product of products">
+    <app-product [product]="product"></app-product>
+</span>

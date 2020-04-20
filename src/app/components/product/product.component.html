@@ -12,7 +12,7 @@
             <div class="col-md-12">MRP {{product.mrp}}</div>
             <div class="col-md-12 color-black font-weight-700">RS {{product.rs}}</div>
             <div class="col-md-12 font-weight-700">
-                <button (click)="addToCart(product)" mat-raised-button class="background-color-green font-weight-700">ADD CART</button>
+                <button (click)="quantity = 1; addToCart(product);" mat-raised-button class="background-color-green font-weight-700">ADD CART</button>
                 
                 <button (click)=addQuantity(); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
                     <mat-icon>add</mat-icon>

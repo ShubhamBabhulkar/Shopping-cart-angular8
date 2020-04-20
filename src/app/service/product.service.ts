@@ -11,6 +11,7 @@ export class ProductService {
 
   getProducts = () => {
     return [{
+      _id: 1,
       brand: 'Milkfood',
       name: 'Milkfood Rich Desi Daneder Ghee',
       mrp: '233',
@@ -18,6 +19,7 @@ export class ProductService {
       off: '20'
     },
     {
+      _id: 2,
       brand: 'Milkfood',
       name: 'Milkfood Rich Desi Daneder Ghee',
       mrp: '233',
@@ -25,6 +27,7 @@ export class ProductService {
       off: '20'
     },
     {
+      _id: 3,
       brand: 'Milkfood',
       name: 'Milkfood Rich Desi Daneder Ghee',
       mrp: '233',
@@ -32,6 +35,7 @@ export class ProductService {
       off: '20'
     },
     {
+      _id: 4,
       brand: 'Milkfood',
       name: 'Milkfood Rich Desi Daneder Ghee',
       mrp: '233',
@@ -39,6 +43,7 @@ export class ProductService {
       off: '20'
     },
     {
+      _id: 5,
       brand: 'Milkfood',
       name: 'Milkfood Rich Desi Daneder Ghee',
       mrp: '233',
@@ -46,6 +51,7 @@ export class ProductService {
       off: '20'
     },
     {
+      _id: 6,
       brand: 'Milkfood',
       name: 'Milkfood Rich Desi Daneder Ghee',
       mrp: '233',

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 })
 export class TopBarComponent implements OnInit {
   user: any;
+  cartCount = 0;
 
   constructor(
     private router: Router,
@@ -17,5 +18,10 @@ export class TopBarComponent implements OnInit {
 
   ngOnInit() {
    this.user = this.authService.currentUser();
+  }
+
+  setCartCount(count) {
+    this.cartCount = count;
+    console.log(this.cartCount);
   }
 }
