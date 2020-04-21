@@ -4,7 +4,7 @@
         <span class="material-icons">shopping_cart</span>
       <span class="wrapper-welcome">Online Shopping Mart</span>
       <span class="example-spacer"></span>
-      <mat-icon matTooltipPosition="before" class="example-icon cursor-pointer" aria-hidden="false" [matBadge]="cartCount || 0" matBadgeColor="warn" matBadgeOverlap="false" [routerLink]="['/cart']" routerLinkActive="router-link-active" >add_shopping_cart</mat-icon>
+      <mat-icon matTooltipPosition="before" class="example-icon cursor-pointer" aria-hidden="false" [matBadge]="productService.getAddedProductsCount() || 0" matBadgeColor="warn" matBadgeOverlap="false" [routerLink]="['/cart']" routerLinkActive="router-link-active" >add_shopping_cart</mat-icon>
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-progress-bar *ngIf="authService.isProgress()" mode="indeterminate"></mat-progress-bar>

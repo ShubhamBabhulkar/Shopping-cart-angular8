@@ -12,15 +12,13 @@
             <div class="col-md-12">MRP {{product.mrp}}</div>
             <div class="col-md-12 color-black font-weight-700">RS {{product.rs}}</div>
             <div class="col-md-12 font-weight-700">
-                <button *ngIf="quantity === 0" (click)="quantity = product.quantity || 1; addToCart(product);" mat-raised-button class="background-color-green font-weight-700">ADD TO CART</button>
-
-                <button  *ngIf="quantity !== 0" mat-raised-button class="background-color-green font-weight-700">ADDED</button>
+                <button (click)="product.quantity = 0; addToCart(product);" mat-raised-button class="background-color-green font-weight-700">Remove</button>
                 
-                <button (click)=addQuantity(); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
+                <button (click)=addQuantity(product); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
                     <mat-icon>add</mat-icon>
                 </button>
                 <span class="margin-left-2rem font-size-1-5rem">{{product.quantity || 0}}</span>
-                <button [disabled]='quantity <= 0' (click)=removeQuantity(); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
+                <button [disabled]='quantity <= 0' (click)=removeQuantity(product); mat-mini-fab aria-label="Example icon-button with a heart icon" class="background-color-green color-black margin-left-2rem">
                         <mat-icon>remove</mat-icon>
                 </button>
             </div>

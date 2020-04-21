@@ -16,15 +16,15 @@ ngOnInit() {
   .then(products =>  this.products = products)
   .catch(err => console.log(err.message));
 }
-  getProducts = () => {
-    return new Promise( (resolve, reject) => {
-      const products = this.productService.getProducts();
-      if (products) {
-        resolve(products);
-      } else {
-        reject(new Error('Product not found'));
-      }
-    });
-  }
+getProducts = () => {
+  return new Promise( (resolve, reject) => {
+    const products = this.productService.getProducts();
+    if (products) {
+      resolve(products);
+    } else {
+      reject(new Error('Product not found'));
+    }
+  });
+}
 
 }

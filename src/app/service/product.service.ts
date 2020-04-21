@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import * as _ from 'lodash';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  private baseUrl = 'http://localhost:3000/user';
-
+  addedProducs = [];
   constructor(private httpRequest: HttpClient) { }
 
   getProducts = () => {
@@ -58,5 +58,32 @@ export class ProductService {
       rs: '32',
       off: '20'
     }];
+  }
+
+  setAddedProducts(product) {
+
+    const isProduct = _.find(this.addedProducs, function(addedProduct) {
+      return addedProduct._id ===  product._id;
+   });
+    if (!isProduct) {
+     this.addedProducs.push(product);
+   } else {
+     if (product.quantity === 0) {
+       _.remove(this.addedProducs, function(products) {
+         return products._id === product._id;
+       });
+     }
+   }
+  }
+  getAddedProduct() {
+    if (this.addedProducs) {
+      console.log(this.addedProducs);
+      return this.addedProducs;
+    }
+  }
+  getAddedProductsCount() {
+    if (this.addedProducs) {
+      return this.addedProducs.length;
+    }
   }
 }
