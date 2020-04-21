@@ -86,4 +86,10 @@ export class ProductService {
       return this.addedProducs.length;
     }
   }
+
+  getTotalAmount() {
+    if (this.addedProducs) {
+      return _.sumBy(this.addedProducs, function(product) { return product.price; });
+    }
+  }
 }

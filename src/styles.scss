@@ -30,6 +30,9 @@ button:focus{
 mat-label:focus{
     outline: none !important;
 }
+mat-icon:focus{
+    outline: none !important;
+}
 span:focus{
     outline: none !important;
 }
@@ -78,4 +81,7 @@ span:focus{
 }
 .padding-right-3rem{
     padding-right: 3rem !important;
+}
+.width-8rem{
+    width:8rem;
 }

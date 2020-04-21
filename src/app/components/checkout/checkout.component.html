@@ -4,6 +4,7 @@
                 <img mat-card-image src="https://n3.sdlcdn.com/imgs/e/l/1/MSG-Cow-Desi-Ghee-1-SDL595875615-1-fddf8.png" alt="Photo of a product">
                 <div *ngIf="product.off" class="col-md-12">
                     <div>{{product.off}}% OFF</div>
+                <div class="color-black font-weight-700">Total {{product.price}}</div>
                 </div>
         </div>
         <div class="offset-md-1 col-md-9">
@@ -24,3 +25,7 @@
             </div>
         </div>
 </div>
+</mat-card>
+<mat-card>
+    TOTAL PRICE = {{productService.getTotalAmount()}}
+    </mat-card>

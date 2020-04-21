@@ -1,10 +1,14 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
   
     <mat-toolbar-row class="padding-right-3rem">
-        <span class="material-icons">shopping_cart</span>
+        <span class="material-icons cursor-pointer" [routerLink]="['/']" routerLinkActive="router-link-active" >shopping_cart</span>
       <span class="wrapper-welcome">Online Shopping Mart</span>
       <span class="example-spacer"></span>
-      <mat-icon matTooltipPosition="before" class="example-icon cursor-pointer" aria-hidden="false" [matBadge]="productService.getAddedProductsCount() || 0" matBadgeColor="warn" matBadgeOverlap="false" [routerLink]="['/cart']" routerLinkActive="router-link-active" >add_shopping_cart</mat-icon>
+
+      <button matTooltip="Cart" [disabled]='productService.getAddedProductsCount() === 0' mat-icon-button aria-label="Example icon-button with a heart icon" [matBadge]="productService.getAddedProductsCount() || 0" matBadgeColor="warn" matBadgeOverlap="true" [routerLink]="['/cart']" routerLinkActive="router-link-active">
+        <mat-icon>add_shopping_cart</mat-icon>
+      </button>
+
     </mat-toolbar-row>
   </mat-toolbar>
   <mat-progress-bar *ngIf="authService.isProgress()" mode="indeterminate"></mat-progress-bar>

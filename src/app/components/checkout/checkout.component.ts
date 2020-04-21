@@ -11,7 +11,7 @@ export class CheckoutComponent implements OnInit {
   quantity: any;
 
   constructor(
-    private productService: ProductService
+    public productService: ProductService
   ) { }
 
   ngOnInit() {
