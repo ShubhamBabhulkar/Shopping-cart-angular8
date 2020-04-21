@@ -1,7 +1,7 @@
 <mat-card class="example-card col-md-12 margin-bottom-1vh">
     <div class="row">
         <div class="col-md-2 text-align-center">
-                <img mat-card-image src="https://n3.sdlcdn.com/imgs/e/l/1/MSG-Cow-Desi-Ghee-1-SDL595875615-1-fddf8.png" alt="Photo of a product">
+                <img mat-card-image src="{{product.img}}" alt="Photo of a product">
                 <div *ngIf="product.off" class="col-md-12">
                     <div>{{product.off}}% OFF</div>
                 </div>
