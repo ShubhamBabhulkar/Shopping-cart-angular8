@@ -77,7 +77,6 @@ export class ProductService {
   }
   getAddedProduct() {
     if (this.addedProducs) {
-      console.log(this.addedProducs);
       return this.addedProducs;
     }
   }

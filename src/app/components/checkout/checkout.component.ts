@@ -11,7 +11,7 @@ export class CheckoutComponent implements OnInit {
   quantity: any;
 
   constructor(
-    public productService: ProductService
+    private productService: ProductService
   ) { }
 
   ngOnInit() {
@@ -26,7 +26,6 @@ export class CheckoutComponent implements OnInit {
   }
 
   addToCart = (product) => {
-    console.log(product);
     product.price = product.rs * product.quantity;
     this.productService.setAddedProducts(product);
   }

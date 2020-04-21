@@ -1,3 +1,9 @@
 <span *ngFor="let product of productService.getAddedProduct()">
     <app-checkout [product]="product"></app-checkout>
 </span>
+<mat-card *ngIf="productService.getTotalAmount()" >
+        <b>TOTAL PRICE = {{productService.getTotalAmount()}}</b>
+</mat-card>
+<mat-card *ngIf="!productService.getTotalAmount()" >
+        Please Select Product
+</mat-card>
