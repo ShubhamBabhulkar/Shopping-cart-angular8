@@ -2,7 +2,7 @@
     <app-checkout [product]="product"></app-checkout>
 </span>
 <mat-card *ngIf="productService.getTotalAmount()" >
-        <b>TOTAL PRICE = {{productService.getTotalAmount()}}</b>
+        <b>GRAND TOTAL = {{productService.getTotalAmount()}}</b>
 </mat-card>
 <mat-card *ngIf="!productService.getTotalAmount()" >
         Please Select Product
